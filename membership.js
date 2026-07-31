@@ -88,4 +88,42 @@ document.addEventListener("DOMContentLoaded", () => {
       membershipPlanInput.value = selectedPlan;
     });
   });
+
+  calculatorDuration.addEventListener("change", calculateMembershipCost);
+  function calculateMembershipCost() {
+    if (selectedPrice === 0) {
+      alert("Please select a membership plan first");
+      return;
+    }
+
+    let months = Number(calculatorDuration.value);
+
+    if (months === 0) {
+      return;
+    }
+
+    let discount = 0;
+
+    if (months === 12) {
+      discount = 10;
+    }
+
+    let total = selectedPrice * months;
+
+    total = total - (total * discount) / 100;
+
+    totalMembershipCost = total;
+
+    summaryPlan.textContent = selectedPlan;
+
+    monthlyFee.textContent = `KSh ${selectedPrice.toLocaleString()}`;
+
+    membershipDuration.textContent = `${months} Month${months > 1 ? "s" : ""}`;
+
+    membershipDiscount.textContent = `${discount}%`;
+
+    membershipTotal.textContent = `KSh ${total.toLocaleString()}`;
+
+    membershipLength.value = `${months} Month${months > 1 ? "s" : ""}`;
+  }
 });
