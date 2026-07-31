@@ -309,4 +309,29 @@ document.addEventListener("DOMContentLoaded", () => {
       physicalFields.style.display = "block";
     }
   });
+
+  function showSuccessModal() {
+    memberName.textContent = fullNameInput.value;
+
+    selectedMembership.textContent = selectedPlan;
+
+    successModal.classList.add("show");
+
+    membershipForm.reset();
+
+    lucide.createIcons();
+  }
+
+  closeSuccessModal.addEventListener("click", () => {
+    successModal.classList.remove("show");
+  });
+  cancelPayment.addEventListener("click", () => {
+    paymentModal.classList.remove("show");
+
+    paymentMethod.value = "";
+
+    cardFields.style.display = "none";
+    mpesaFields.style.display = "none";
+    physicalFields.style.display = "none";
+  });
 });
