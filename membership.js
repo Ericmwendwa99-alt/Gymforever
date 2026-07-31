@@ -88,4 +88,108 @@ document.addEventListener("DOMContentLoaded", () => {
       membershipPlanInput.value = selectedPlan;
     });
   });
+
+  calculatorDuration.addEventListener("change", calculateMembershipCost);
+  function calculateMembershipCost() {
+    if (selectedPrice === 0) {
+      alert("Please select a membership plan first");
+      return;
+    }
+
+    let months = Number(calculatorDuration.value);
+
+    if (months === 0) {
+      return;
+    }
+
+    let discount = 0;
+
+    if (months === 12) {
+      discount = 10;
+    }
+
+    let total = selectedPrice * months;
+
+    total = total - (total * discount) / 100;
+
+    totalMembershipCost = total;
+
+    summaryPlan.textContent = selectedPlan;
+
+    monthlyFee.textContent = `KSh ${selectedPrice.toLocaleString()}`;
+
+    membershipDuration.textContent = `${months} Month${months > 1 ? "s" : ""}`;
+
+    membershipDiscount.textContent = `${discount}%`;
+
+    membershipTotal.textContent = `KSh ${total.toLocaleString()}`;
+
+    membershipLength.value = `${months} Month${months > 1 ? "s" : ""}`;
+  }
+
+  calculateBmiBtn.addEventListener("click", calculateBMI);
+
+  function calculateBMI() {
+    const height = Number(heightInput.value);
+    const weight = Number(weightInput.value);
+
+    if (height <= 0 || weight <= 0) {
+      alert("Please enter valid height and weight");
+      return;
+    }
+
+    const heightInMeters = height / 100;
+
+    const bmi = weight / (heightInMeters * heightInMeters);
+
+    const roundedBMI = bmi.toFixed(1);
+
+    bmiValue.textContent = roundedBMI;
+
+    let status = "";
+    let message = "";
+
+    if (bmi < 18.5) {
+      status = "Underweight";
+
+      message =
+        "Your BMI is below the normal range. Consider improving your nutrition and consulting a fitness professional.";
+    } else if (bmi >= 18.5 && bmi < 25) {
+      status = "Normal";
+
+      message =
+        "Great! Your BMI is within the healthy range. Keep maintaining your fitness routine.";
+    } else if (bmi >= 25 && bmi < 30) {
+      status = "Overweight";
+
+      message =
+        "Your BMI is above the normal range. Regular exercise and balanced nutrition can help.";
+    } else {
+      status = "Obese";
+
+      message =
+        "Your BMI is in the obese range. Consider creating a structured fitness and health plan.";
+    }
+
+    bmiStatus.textContent = status;
+
+    bmiMessage.textContent = message;
+
+    bmiStatus.classList.remove(
+      "bmi-underweight",
+      "bmi-normal",
+      "bmi-overweight",
+      "bmi-obese",
+    );
+
+    if (status === "Underweight") {
+      bmiStatus.classList.add("bmi-underweight");
+    } else if (status === "Normal") {
+      bmiStatus.classList.add("bmi-normal");
+    } else if (status === "Overweight") {
+      bmiStatus.classList.add("bmi-overweight");
+    } else {
+      bmiStatus.classList.add("bmi-obese");
+    }
+  }
 });
