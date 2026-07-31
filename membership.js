@@ -64,4 +64,28 @@ document.addEventListener("DOMContentLoaded", () => {
   let totalMembershipCost = 0;
   let currentTestimonial = 0;
 
+  planCards.forEach((card) => {
+    const button = card.querySelector(".plan-btn");
+
+    button.addEventListener("click", () => {
+      planCards.forEach((plan) => {
+        plan.classList.remove("selected");
+
+        plan.querySelector(".plan-btn").textContent = "Select Plan";
+      });
+      card.classList.add("selected");
+      button.textContent = "Selected ✓";
+
+      selectedPlan = card.dataset.plan;
+
+      selectedPrice = Number(card.dataset.price);
+      selectedPlanName.textContent = selectedPlan;
+
+      summaryPlan.textContent = selectedPlan;
+
+      monthlyFee.textContent = `KSh ${selectedPrice.toLocaleString()}`;
+
+      membershipPlanInput.value = selectedPlan;
+    });
+  });
 });
