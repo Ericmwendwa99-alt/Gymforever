@@ -274,4 +274,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
     openPaymentModal();
   }
+
+  function openPaymentModal() {
+    paymentPlan.textContent = selectedPlan;
+    paymentDuration.textContent = membershipLength.value;
+    paymentTotal.textContent = `KSh ${totalMembershipCost.toLocaleString()}`;
+
+    paymentMethod.value = "";
+    cardName.value = "";
+    cardNumber.value = "";
+    expiry.value = "";
+    cvv.value = "";
+    mpesaNumber.value = "";
+
+    cardFields.style.display = "none";
+    mpesaFields.style.display = "none";
+    physicalFields.style.display = "none";
+
+    paymentModal.classList.add("show");
+
+    lucide.createIcons();
+  }
+
+  paymentMethod.addEventListener("change", () => {
+    cardFields.style.display = "none";
+    mpesaFields.style.display = "none";
+    physicalFields.style.display = "none";
+
+    if (paymentMethod.value === "Card") {
+      cardFields.style.display = "block";
+    } else if (paymentMethod.value === "Mpesa") {
+      mpesaFields.style.display = "block";
+    } else if (paymentMethod.value === "Physical") {
+      physicalFields.style.display = "block";
+    }
+  });
 });
