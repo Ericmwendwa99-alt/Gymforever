@@ -1,0 +1,518 @@
+/*====================================
+  RESET
+====================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/*====================================
+  BODY
+====================================*/
+
+body{
+    background:#111;
+    color:#fff;
+}
+
+/*====================================
+  HERO SECTION
+====================================*/
+
+.hero{
+    width:100%;
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+    url("images/gym-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/*====================================
+  HEADER
+====================================*/
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 80px;
+}
+
+/*====================================
+  LOGO
+====================================*/
+
+.logo h1{
+    font-size:42px;
+    color:#fff;
+}
+
+.logo span{
+    color:#FFC107;
+}
+
+.logo p{
+    color:#fff;
+    font-size:12px;
+    letter-spacing:3px;
+    margin-top:5px;
+}
+
+/*====================================
+  NAVIGATION
+====================================*/
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#fff;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active{
+    color:#FFC107;
+}
+
+/*====================================
+  JOIN BUTTON
+====================================*/
+
+.join-btn{
+    text-decoration:none;
+    color:#FFC107;
+    border:2px solid #FFC107;
+    padding:12px 28px;
+    border-radius:6px;
+    transition:.3s;
+}
+
+.join-btn:hover{
+    background:#FFC107;
+    color:#111;
+}
+
+/*====================================
+  HERO CONTENT
+====================================*/
+
+.hero-content{
+    margin-left:80px;
+    margin-top:120px;
+}
+
+.hero-content h2{
+    font-size:90px;
+    line-height:90px;
+    color:#fff;
+}
+
+.hero-content span{
+    color:#FFC107;
+}
+
+.hero-content p{
+    width:550px;
+    margin:30px 0;
+    line-height:35px;
+    font-size:22px;
+}
+
+/*====================================
+  BUTTONS
+====================================*/
+
+.buttons{
+    display:flex;
+    gap:20px;
+}
+
+.btn1,
+.btn2{
+    text-decoration:none;
+    padding:15px 40px;
+    border-radius:6px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn1{
+    background:#FFC107;
+    color:#111;
+}
+
+.btn1:hover{
+    background:#fff;
+}
+
+.btn2{
+    border:2px solid #FFC107;
+    color:#FFC107;
+}
+
+.btn2:hover{
+    background:#FFC107;
+    color:#111;
+}
+
+/*====================================
+  FEATURES
+====================================*/
+
+.features{
+    width:90%;
+    margin:120px auto 0;
+    display:flex;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.feature-box{
+    flex:1;
+    background:rgba(20,20,20,.85);
+    padding:35px 25px;
+    border-radius:12px;
+    text-align:center;
+    transition:.3s;
+}
+
+.feature-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 25px rgba(255,193,7,.25);
+}
+
+/*====================================
+  FEATURE ICON
+====================================*/
+
+.feature-box i{
+    width:75px;
+    height:75px;
+    line-height:75px;
+    font-size:30px;
+
+    background:#FFC107;
+    color:#111;
+
+    border-radius:50%;
+    margin-bottom:20px;
+}
+
+/*====================================
+  FEATURE TEXT
+====================================*/
+
+.feature-box h3{
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.feature-box p{
+    color:#ddd;
+    line-height:1.8;
+    font-size:16px;
+
+/*====================================
+    ABOUT PAGE
+====================================*/
+
+.about-page{
+    min-height:100vh;
+    background:#111;
+}
+
+.about-container{
+    width:90%;
+    margin:80px auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+}
+
+.about-image{
+    flex:1;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:15px;
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text h2{
+    font-size:50px;
+    color:#FFC107;
+    margin-bottom:25px;
+}
+
+.about-text p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:25px;
+    color:#ddd;
+}
+/*====================================
+    CLASS CONTAINER
+====================================*/
+
+.class-container{
+    width:100%;
+    max-width:1200px;
+
+    margin:0 auto;
+
+    display:grid;
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+
+    gap:20px;
+}
+
+
+/*====================================
+    CLASS CARD
+====================================*/
+
+.class-card{
+    width:100%;
+
+    background:#1b1b1b;
+
+    border-radius:12px;
+    overflow:hidden;
+
+    text-align:center;
+
+    transition:0.3s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+}
+
+
+/*====================================
+    CLASS CARD HOVER
+====================================*/
+
+.class-card:hover{
+    transform:translateY(-8px);
+}
+
+
+/*====================================
+    CLASS IMAGE
+====================================*/
+
+.class-card img{
+    width:100%;
+    height:220px;
+
+    object-fit:cover;
+}
+
+
+/*====================================
+    CLASS TITLE
+====================================*/
+
+.class-card h3{
+    color:#FFC107;
+
+    font-size:22px;
+
+    margin:20px 0 10px;
+}
+
+
+/*====================================
+    CLASS DESCRIPTION
+====================================*/
+
+.class-card p{
+    color:#ddd;
+
+    line-height:1.6;
+
+    padding:0 15px;
+
+    margin-bottom:20px;
+}
+
+
+/*====================================
+    CLASS BUTTON
+====================================*/
+
+.class-btn{
+    display:inline-block;
+
+    background:#FFC107;
+    color:#111;
+
+    text-decoration:none;
+
+    padding:12px 25px;
+
+    border-radius:6px;
+
+    font-weight:bold;
+
+    margin-bottom:25px;
+
+    transition:0.3s;
+}
+
+
+.class-btn:hover{
+    background:#fff;
+}
+/*====================================
+    CONTACT PAGE
+====================================*/
+
+.contact{
+    width:90%;
+    max-width:1100px;
+
+    margin:80px auto;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:flex-start;
+
+    gap:70px;
+}
+
+
+/*====================================
+    CONTACT INFORMATION
+====================================*/
+
+.contact-info{
+    flex:1;
+}
+
+.contact-info h2{
+    color:#FFC107;
+    font-size:50px;
+
+    margin-bottom:20px;
+}
+
+.contact-info p{
+    color:#ddd;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+    margin-bottom:18px;
+}
+
+
+/*====================================
+    CONTACT FORM
+====================================*/
+
+.contact-form{
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    background:#1b1b1b;
+
+    color:#fff;
+
+    border:1px solid #444;
+
+    border-radius:6px;
+
+    font-size:16px;
+
+    outline:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#FFC107;
+}
+
+.contact-form textarea{
+    height:150px;
+
+    resize:none;
+}
+
+
+/*====================================
+    SUBMIT BUTTON
+====================================*/
+
+.contact-form button{
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:6px;
+
+    background:#FFC107;
+
+    color:#111;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.contact-form button:hover{
+    background:#fff;
+}
+
+
+/*====================================
+    FORM MESSAGE
+====================================*/
+
+#formMessage{
+    margin-top:5px;
+
+    font-weight:bold;
+
+    text-align:center;
+}

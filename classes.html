@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Classes | FitZone Gym</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <!-- Logo -->
+        <div class="logo">
+
+            <h1>FIT<span>ZONE</span></h1>
+
+            <p>STRONGER EVERYDAY</p>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="classes.html" class="active">Classes</a>
+                </li>
+
+                <li>
+                    <a href="membership.html">Membership</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- Join Button -->
+        <a href="membership.html" class="join-btn">
+            Join Now
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main>
+
+        <section class="classes">
+
+            <!-- Page Heading -->
+            <h2>Our Training Programs</h2>
+
+
+            <!-- Introduction -->
+            <p class="class-intro">
+
+                Choose a training program that matches your fitness goals
+                and start your journey toward a stronger and healthier you.
+
+            </p>
+
+
+            <!-- =========================
+                 FILTER BUTTONS
+            ========================== -->
+
+            <div class="class-filters">
+
+                <button
+                    class="filter-btn active"
+                    data-filter="all">
+                    All
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="strength">
+                    Strength
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="cardio">
+                    Cardio
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="yoga">
+                    Yoga
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="crossfit">
+                    CrossFit
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 CLASS CARDS
+            ========================== -->
+
+            <div class="class-container">
+
+
+                <!-- Strength Training -->
+                <div
+                    class="class-card"
+                    data-category="strength">
+
+                    <img
+                        src="images/strength.jpg"
+                        alt="Strength Training">
+
+                    <h3>Strength Training</h3>
+
+                    <p>
+
+                        Build muscle, increase power and improve
+                        your overall body strength.
+
+                    </p>
+
+                    <a
+                        href="membership.html"
+                        class="class-btn">
+
+                        Join Class
+
+                    </a>
+
+                </div>
+
+
+                <!-- Cardio Training -->
+                <div
+                    class="class-card"
+                    data-category="cardio">
+
+                    <img
+                        src="images/cardio.jpg"
+                        alt="Cardio Training">
+
+                    <h3>Cardio Training</h3>
+
+                    <p>
+
+                        Improve endurance, burn calories and strengthen
+                        your cardiovascular health.
+
+                    </p>
+
+                    <a
+                        href="membership.html"
+                        class="class-btn">
+
+                        Join Class
+
+                    </a>
+
+                </div>
+
+
+                <!-- Yoga -->
+                <div
+                    class="class-card"
+                    data-category="yoga">
+
+                    <img
+                        src="images/yoga.jpg"
+                        alt="Yoga Training">
+
+                    <h3>Yoga & Flexibility</h3>
+
+                    <p>
+
+                        Improve flexibility, balance and relaxation
+                        through guided yoga sessions.
+
+                    </p>
+
+                    <a
+                        href="membership.html"
+                        class="class-btn">
+
+                        Join Class
+
+                    </a>
+
+                </div>
+
+
+                <!-- CrossFit -->
+                <div
+                    class="class-card"
+                    data-category="crossfit">
+
+                    <img
+                        src="images/crossfit.jpg"
+                        alt="CrossFit Training">
+
+                    <h3>CrossFit</h3>
+
+                    <p>
+
+                        High-intensity workouts designed to improve
+                        strength, speed and stamina.
+
+                    </p>
+
+                    <a
+                        href="membership.html"
+                        class="class-btn">
+
+                        Join Class
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
