@@ -12,4 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const membershipDuration = document.getElementById("membershipDuration");
   const membershipDiscount = document.getElementById("membershipDiscount");
   const membershipTotal = document.getElementById("membershipTotal");
+  const heightInput = document.getElementById("height");
+  const weightInput = document.getElementById("weight");
+  const calculateBmiBtn = document.getElementById("calculateBmi");
+  const bmiValue = document.getElementById("bmiValue");
+  const bmiStatus = document.getElementById("bmiStatus");
+  const bmiMessage = document.getElementById("bmiMessage");
 });
