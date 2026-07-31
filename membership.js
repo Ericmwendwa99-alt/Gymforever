@@ -310,6 +310,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  function sendMembershipEmail(data) {
+    emailjs
+      .send("service_db022jg", "template_4lawtdd", data)
+      .then(() => {
+        console.log("Email sent successfully");
+      })
+      .catch((error) => {
+        console.log("Email failed", error);
+      });
+  }
+
+  function sendWelcomeEmail(data) {
+    emailjs
+      .send("service_db022jg", "template_6o2oa0c", data)
+      .then(() => {
+        console.log("Welcome email sent");
+      })
+      .catch((error) => {
+        console.log("Welcome email failed", error);
+      });
+  }
+
   function showSuccessModal() {
     memberName.textContent = fullNameInput.value;
 
