@@ -192,4 +192,215 @@ document.addEventListener("DOMContentLoaded", () => {
       bmiStatus.classList.add("bmi-obese");
     }
   }
+
+  membershipForm.addEventListener("submit", submitMembership);
+
+  function submitMembership(e) {
+    e.preventDefault();
+
+    let isValid = true;
+
+    nameError.textContent = "";
+    emailError.textContent = "";
+    phoneError.textContent = "";
+    ageError.textContent = "";
+    genderError.textContent = "";
+    startDateError.textContent = "";
+    planError.textContent = "";
+
+    if (fullNameInput.value.trim() === "") {
+      nameError.textContent = "Please enter your full name";
+
+      isValid = false;
+    }
+
+    if (emailInput.value.trim() === "") {
+      emailError.textContent = "Please enter your email";
+
+      isValid = false;
+    }
+
+    if (phoneInput.value.trim() === "") {
+      phoneError.textContent = "Please enter your phone number";
+
+      isValid = false;
+    }
+
+    if (ageInput.value < 16) {
+      ageError.textContent = "Minimum age is 16 years";
+
+      isValid = false;
+    }
+
+    if (genderInput.value === "") {
+      genderError.textContent = "Please select gender";
+
+      isValid = false;
+    }
+
+    if (selectedPlan === "") {
+      planError.textContent = "Please select a membership plan";
+
+      isValid = false;
+    }
+
+    if (startDateInput.value === "") {
+      startDateError.textContent = "Please select start date";
+
+      isValid = false;
+    }
+
+    if (!isValid) {
+      return;
+    }
+
+    const membershipData = {
+      name: fullNameInput.value,
+      email: emailInput.value,
+      phone: phoneInput.value,
+      emergencyContact: emergencyContactInput.value,
+      age: ageInput.value,
+      gender: genderInput.value,
+      plan: selectedPlan,
+      duration: membershipLength.value,
+      amount: `KSh ${totalMembershipCost.toLocaleString()}`,
+      startDate: startDateInput.value,
+      fitnessGoal: document.getElementById("fitnessGoal").value,
+      medicalConditions: document.getElementById("medicalConditions").value,
+      submittedAt: new Date().toLocaleString(),
+    };
+
+    pendingApplication = membershipData;
+
+    openPaymentModal();
+  }
+
+  function openPaymentModal() {
+    paymentPlan.textContent = selectedPlan;
+    paymentDuration.textContent = membershipLength.value;
+    paymentTotal.textContent = `KSh ${totalMembershipCost.toLocaleString()}`;
+
+    paymentMethod.value = "";
+    cardName.value = "";
+    cardNumber.value = "";
+    expiry.value = "";
+    cvv.value = "";
+    mpesaNumber.value = "";
+
+    cardFields.style.display = "none";
+    mpesaFields.style.display = "none";
+    physicalFields.style.display = "none";
+
+    paymentModal.classList.add("show");
+
+    lucide.createIcons();
+  }
+
+  paymentMethod.addEventListener("change", () => {
+    cardFields.style.display = "none";
+    mpesaFields.style.display = "none";
+    physicalFields.style.display = "none";
+
+    if (paymentMethod.value === "Card") {
+      cardFields.style.display = "block";
+    } else if (paymentMethod.value === "Mpesa") {
+      mpesaFields.style.display = "block";
+    } else if (paymentMethod.value === "Physical") {
+      physicalFields.style.display = "block";
+    }
+  });
+
+  function sendMembershipEmail(data) {
+    emailjs
+      .send("service_db022jg", "template_4lawtdd", data)
+      .then(() => {
+        console.log("Email sent successfully");
+      })
+      .catch((error) => {
+        console.log("Email failed", error);
+      });
+  }
+
+  function sendWelcomeEmail(data) {
+    emailjs
+      .send("service_db022jg", "template_6o2oa0c", data)
+      .then(() => {
+        console.log("Welcome email sent");
+      })
+      .catch((error) => {
+        console.log("Welcome email failed", error);
+      });
+  }
+
+  function showSuccessModal() {
+    memberName.textContent = fullNameInput.value;
+
+    selectedMembership.textContent = selectedPlan;
+
+    successModal.classList.add("show");
+
+    membershipForm.reset();
+
+    lucide.createIcons();
+  }
+
+  closeSuccessModal.addEventListener("click", () => {
+    successModal.classList.remove("show");
+  });
+  cancelPayment.addEventListener("click", () => {
+    paymentModal.classList.remove("show");
+
+    paymentMethod.value = "";
+
+    cardFields.style.display = "none";
+    mpesaFields.style.display = "none";
+    physicalFields.style.display = "none";
+  });
+
+  confirmPayment.addEventListener("click", () => {
+    if (paymentMethod.value === "") {
+      alert("Please select a payment method.");
+      return;
+    }
+
+    if (paymentMethod.value === "Card") {
+      if (
+        cardName.value.trim() === "" ||
+        cardNumber.value.trim() === "" ||
+        expiry.value.trim() === "" ||
+        cvv.value.trim() === ""
+      ) {
+        alert("Please complete all card details.");
+        return;
+      }
+    }
+
+    if (paymentMethod.value === "Mpesa") {
+      if (mpesaNumber.value.trim() === "") {
+        alert("Please enter your M-Pesa number.");
+        return;
+      }
+    }
+
+    pendingApplication.paymentMethod = paymentMethod.value;
+
+    if (paymentMethod.value === "Physical") {
+      pendingApplication.paymentStatus = "Pending Physical Payment";
+    } else {
+      pendingApplication.paymentStatus = "Paid";
+    }
+
+    sendMembershipEmail(pendingApplication);
+
+    sendWelcomeEmail(pendingApplication);
+
+    localStorage.setItem(
+      "membershipApplication",
+      JSON.stringify(pendingApplication),
+    );
+
+    paymentModal.classList.remove("show");
+
+    showSuccessModal();
+  });
 });
