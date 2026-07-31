@@ -334,4 +334,51 @@ document.addEventListener("DOMContentLoaded", () => {
     mpesaFields.style.display = "none";
     physicalFields.style.display = "none";
   });
+
+  confirmPayment.addEventListener("click", () => {
+    if (paymentMethod.value === "") {
+      alert("Please select a payment method.");
+      return;
+    }
+
+    if (paymentMethod.value === "Card") {
+      if (
+        cardName.value.trim() === "" ||
+        cardNumber.value.trim() === "" ||
+        expiry.value.trim() === "" ||
+        cvv.value.trim() === ""
+      ) {
+        alert("Please complete all card details.");
+        return;
+      }
+    }
+
+    if (paymentMethod.value === "Mpesa") {
+      if (mpesaNumber.value.trim() === "") {
+        alert("Please enter your M-Pesa number.");
+        return;
+      }
+    }
+
+    pendingApplication.paymentMethod = paymentMethod.value;
+
+    if (paymentMethod.value === "Physical") {
+      pendingApplication.paymentStatus = "Pending Physical Payment";
+    } else {
+      pendingApplication.paymentStatus = "Paid";
+    }
+
+    sendMembershipEmail(pendingApplication);
+
+    sendWelcomeEmail(pendingApplication);
+
+    localStorage.setItem(
+      "membershipApplication",
+      JSON.stringify(pendingApplication),
+    );
+
+    paymentModal.classList.remove("show");
+
+    showSuccessModal();
+  });
 });
