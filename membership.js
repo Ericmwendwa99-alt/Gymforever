@@ -192,4 +192,86 @@ document.addEventListener("DOMContentLoaded", () => {
       bmiStatus.classList.add("bmi-obese");
     }
   }
+
+  membershipForm.addEventListener("submit", submitMembership);
+
+  function submitMembership(e) {
+    e.preventDefault();
+
+    let isValid = true;
+
+    nameError.textContent = "";
+    emailError.textContent = "";
+    phoneError.textContent = "";
+    ageError.textContent = "";
+    genderError.textContent = "";
+    startDateError.textContent = "";
+    planError.textContent = "";
+
+    if (fullNameInput.value.trim() === "") {
+      nameError.textContent = "Please enter your full name";
+
+      isValid = false;
+    }
+
+    if (emailInput.value.trim() === "") {
+      emailError.textContent = "Please enter your email";
+
+      isValid = false;
+    }
+
+    if (phoneInput.value.trim() === "") {
+      phoneError.textContent = "Please enter your phone number";
+
+      isValid = false;
+    }
+
+    if (ageInput.value < 16) {
+      ageError.textContent = "Minimum age is 16 years";
+
+      isValid = false;
+    }
+
+    if (genderInput.value === "") {
+      genderError.textContent = "Please select gender";
+
+      isValid = false;
+    }
+
+    if (selectedPlan === "") {
+      planError.textContent = "Please select a membership plan";
+
+      isValid = false;
+    }
+
+    if (startDateInput.value === "") {
+      startDateError.textContent = "Please select start date";
+
+      isValid = false;
+    }
+
+    if (!isValid) {
+      return;
+    }
+
+    const membershipData = {
+      name: fullNameInput.value,
+      email: emailInput.value,
+      phone: phoneInput.value,
+      emergencyContact: emergencyContactInput.value,
+      age: ageInput.value,
+      gender: genderInput.value,
+      plan: selectedPlan,
+      duration: membershipLength.value,
+      amount: `KSh ${totalMembershipCost.toLocaleString()}`,
+      startDate: startDateInput.value,
+      fitnessGoal: document.getElementById("fitnessGoal").value,
+      medicalConditions: document.getElementById("medicalConditions").value,
+      submittedAt: new Date().toLocaleString(),
+    };
+
+    pendingApplication = membershipData;
+
+    openPaymentModal();
+  }
 });
