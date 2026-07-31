@@ -18,4 +18,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const bmiValue = document.getElementById("bmiValue");
   const bmiStatus = document.getElementById("bmiStatus");
   const bmiMessage = document.getElementById("bmiMessage");
+  const membershipForm = document.getElementById("membershipRegistrationForm");
+  const fullNameInput = document.getElementById("fullName");
+  const emailInput = document.getElementById("email");
+  const phoneInput = document.getElementById("phone");
+  const ageInput = document.getElementById("age");
+  const genderInput = document.getElementById("gender");
+  const startDateInput = document.getElementById("startDate");
+  const emergencyContactInput = document.getElementById("emergencyContact");
+
+  const nameError = document.getElementById("nameError");
+  const emailError = document.getElementById("emailError");
+  const phoneError = document.getElementById("phoneError");
+  const ageError = document.getElementById("ageError");
+  const genderError = document.getElementById("genderError");
+  const startDateError = document.getElementById("startDateError");
+  const planError = document.getElementById("planError");
+
 });
