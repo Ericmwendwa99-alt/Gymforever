@@ -403,4 +403,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
     showSuccessModal();
   });
+  function showTestimonial(index) {
+    testimonials.forEach((testimonial) => {
+      testimonial.classList.remove("active");
+    });
+
+    dots.forEach((dot) => {
+      dot.classList.remove("active");
+    });
+
+    testimonials[index].classList.add("active");
+
+    dots[index].classList.add("active");
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentTestimonial = index;
+
+      showTestimonial(currentTestimonial);
+    });
+  });
+
+  setInterval(() => {
+    currentTestimonial++;
+
+    if (currentTestimonial >= testimonials.length) {
+      currentTestimonial = 0;
+    }
+
+    showTestimonial(currentTestimonial);
+  }, 5000);
+
+  faqQuestions.forEach((question) => {
+    question.addEventListener("click", () => {
+      const faqItem = question.parentElement;
+
+      faqItem.classList.toggle("active");
+    });
+  });
 });
