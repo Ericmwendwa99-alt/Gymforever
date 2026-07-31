@@ -442,4 +442,20 @@ document.addEventListener("DOMContentLoaded", () => {
       faqItem.classList.toggle("active");
     });
   });
+
+  const menuToggle = document.getElementById("menuToggle");
+
+  const navbar = document.getElementById("navbar");
+
+  menuToggle.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+
+    if (navbar.classList.contains("active")) {
+      menuToggle.innerHTML = '<i data-lucide="x"></i>';
+    } else {
+      menuToggle.innerHTML = '<i data-lucide="menu"></i>';
+    }
+
+    lucide.createIcons();
+  });
 });
