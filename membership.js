@@ -403,4 +403,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
     showSuccessModal();
   });
+  function showTestimonial(index) {
+    testimonials.forEach((testimonial) => {
+      testimonial.classList.remove("active");
+    });
+
+    dots.forEach((dot) => {
+      dot.classList.remove("active");
+    });
+
+    testimonials[index].classList.add("active");
+
+    dots[index].classList.add("active");
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentTestimonial = index;
+
+      showTestimonial(currentTestimonial);
+    });
+  });
+
+  setInterval(() => {
+    currentTestimonial++;
+
+    if (currentTestimonial >= testimonials.length) {
+      currentTestimonial = 0;
+    }
+
+    showTestimonial(currentTestimonial);
+  }, 5000);
+
+  faqQuestions.forEach((question) => {
+    question.addEventListener("click", () => {
+      const faqItem = question.parentElement;
+
+      faqItem.classList.toggle("active");
+    });
+  });
+
+  const menuToggle = document.getElementById("menuToggle");
+
+  const navbar = document.getElementById("navbar");
+
+  menuToggle.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+
+    if (navbar.classList.contains("active")) {
+      menuToggle.innerHTML = '<i data-lucide="x"></i>';
+    } else {
+      menuToggle.innerHTML = '<i data-lucide="menu"></i>';
+    }
+
+    lucide.createIcons();
+  });
 });
