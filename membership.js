@@ -126,4 +126,70 @@ document.addEventListener("DOMContentLoaded", () => {
 
     membershipLength.value = `${months} Month${months > 1 ? "s" : ""}`;
   }
+
+  calculateBmiBtn.addEventListener("click", calculateBMI);
+
+  function calculateBMI() {
+    const height = Number(heightInput.value);
+    const weight = Number(weightInput.value);
+
+    if (height <= 0 || weight <= 0) {
+      alert("Please enter valid height and weight");
+      return;
+    }
+
+    const heightInMeters = height / 100;
+
+    const bmi = weight / (heightInMeters * heightInMeters);
+
+    const roundedBMI = bmi.toFixed(1);
+
+    bmiValue.textContent = roundedBMI;
+
+    let status = "";
+    let message = "";
+
+    if (bmi < 18.5) {
+      status = "Underweight";
+
+      message =
+        "Your BMI is below the normal range. Consider improving your nutrition and consulting a fitness professional.";
+    } else if (bmi >= 18.5 && bmi < 25) {
+      status = "Normal";
+
+      message =
+        "Great! Your BMI is within the healthy range. Keep maintaining your fitness routine.";
+    } else if (bmi >= 25 && bmi < 30) {
+      status = "Overweight";
+
+      message =
+        "Your BMI is above the normal range. Regular exercise and balanced nutrition can help.";
+    } else {
+      status = "Obese";
+
+      message =
+        "Your BMI is in the obese range. Consider creating a structured fitness and health plan.";
+    }
+
+    bmiStatus.textContent = status;
+
+    bmiMessage.textContent = message;
+
+    bmiStatus.classList.remove(
+      "bmi-underweight",
+      "bmi-normal",
+      "bmi-overweight",
+      "bmi-obese",
+    );
+
+    if (status === "Underweight") {
+      bmiStatus.classList.add("bmi-underweight");
+    } else if (status === "Normal") {
+      bmiStatus.classList.add("bmi-normal");
+    } else if (status === "Overweight") {
+      bmiStatus.classList.add("bmi-overweight");
+    } else {
+      bmiStatus.classList.add("bmi-obese");
+    }
+  }
 });
