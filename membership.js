@@ -35,4 +35,33 @@ document.addEventListener("DOMContentLoaded", () => {
   const startDateError = document.getElementById("startDateError");
   const planError = document.getElementById("planError");
 
+  const successModal = document.getElementById("successModal");
+  const memberName = document.getElementById("memberName");
+  const selectedMembership = document.getElementById("selectedMembership");
+  const closeSuccessModal = document.getElementById("closeSuccessModal");
+  const paymentModal = document.getElementById("paymentModal");
+  const paymentPlan = document.getElementById("paymentPlan");
+  const paymentDuration = document.getElementById("paymentDuration");
+  const paymentTotal = document.getElementById("paymentTotal");
+  const paymentMethod = document.getElementById("paymentMethod");
+  const cardFields = document.getElementById("cardFields");
+  const mpesaFields = document.getElementById("mpesaFields");
+  const physicalFields = document.getElementById("physicalFields");
+  const cardName = document.getElementById("cardName");
+  const cardNumber = document.getElementById("cardNumber");
+  const expiry = document.getElementById("expiry");
+  const cvv = document.getElementById("cvv");
+  const mpesaNumber = document.getElementById("mpesaNumber");
+  const cancelPayment = document.getElementById("cancelPayment");
+  const confirmPayment = document.getElementById("confirmPayment");
+  const testimonials = document.querySelectorAll(".testimonial");
+  const dots = document.querySelectorAll(".dot");
+  const faqQuestions = document.querySelectorAll(".faq-question");
+
+  let pendingApplication = null;
+  let selectedPlan = "";
+  let selectedPrice = 0;
+  let totalMembershipCost = 0;
+  let currentTestimonial = 0;
+
 });
