@@ -83,11 +83,6 @@ The website is fully responsive and optimized for:
 
 ## **Authors**
 
-- Richard Wasonga *(Membership Page)*
-- *(Other contributors can add their names and pages here.)*
+- [Richard Wasonga](https://github.com/Richard3wasonga) *(Membership Page)*
+- [Ashley Mwanza](https://github.com/Richard3wasonga) *(Membership Page)*
 
----
-
-## **License**
-
-This project is open-source and available under the MIT License.
