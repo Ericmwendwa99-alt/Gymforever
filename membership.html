@@ -1,173 +1,1072 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitZone Gym | Membership</title>
 
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Membership | FitZone Gym</title>
-
-    <link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
-    <!-- Header -->
-    <header>
-
-        <!-- Logo -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="membership-hero">
+      <header>
         <div class="logo">
-
-            <h1>FIT<span>ZONE</span></h1>
-
-            <p>STRONGER EVERYDAY</p>
-
+          <h1>FIT<span>ZONE</span></h1>
+          <p>STRONGER EVERYDAY</p>
         </div>
 
+        <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
+          <i data-lucide="menu"></i>
+        </button>
 
-        <!-- Navigation -->
-        <nav>
-
-            <ul>
-
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-
-                <li>
-                    <a href="classes.html">Classes</a>
-                </li>
-
-                <li>
-                    <a href="membership.html" class="active">Membership</a>
-                </li>
-
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-
-            </ul>
-
+        <nav id="navbar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="membership.html" class="active">Membership</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </nav>
 
+        <a href="#membershipForm" class="join-btn">Join Now</a>
+      </header>
 
-        <!-- Join Button -->
-        <a href="contact.html" class="join-btn">
-            Join Now
-        </a>
+      <div class="hero-content">
+        <h2>
+          BECOME <br />
+          <span>A MEMBER</span>
+        </h2>
 
-    </header>
+        <p>
+          Choose the membership plan that fits your goals and start your fitness
+          journey with FitZone today.
+        </p>
 
+        <div class="buttons">
+          <a href="#membershipForm" class="btn1">Join Membership</a>
+          <a href="#plans" class="btn2">View Plans</a>
+        </div>
+      </div>
+    </section>
 
-    <!-- Main Content -->
-    <main>
+    <section class="membership-plans" id="plans">
+      <div class="section-title">
+        <h2>Choose Your Membership</h2>
 
-        <!-- Membership Section -->
-        <section class="membership">
+        <p>
+          Select the membership that best fits your fitness goals. Your choice
+          will automatically update the calculator and registration form.
+        </p>
+      </div>
 
-            <h2>Membership Plans</h2>
+      <div class="plans-container">
+        <div class="plan-card" data-plan="Basic" data-price="2500">
+          <div class="selected-badge">
+            <i data-lucide="badge-check"></i>
 
-            <p class="membership-intro">
-                Choose the membership plan that best fits your
-                fitness goals and lifestyle.
+            <span>Selected</span>
+          </div>
+
+          <div class="plan-icon">
+            <i data-lucide="badge"></i>
+          </div>
+
+          <h3>Basic</h3>
+
+          <div class="plan-price">
+            <span class="currency"> KSh </span>
+
+            <h2>2,500</h2>
+
+            <span class="duration"> / month </span>
+          </div>
+
+          <hr />
+
+          <ul>
+            <li>
+              <i data-lucide="check"></i>
+
+              Gym Access
+            </li>
+
+            <li>
+              <i data-lucide="check"></i>
+
+              Locker Access
+            </li>
+
+            <li>
+              <i data-lucide="check"></i>
+
+              Fitness Assessment
+            </li>
+          </ul>
+
+          <hr />
+
+          <button class="plan-btn">Select Plan</button>
+        </div>
+
+        <div class="plan-card featured" data-plan="Premium" data-price="5000">
+          <div class="popular">Most Popular</div>
+
+          <div class="selected-badge">
+            <i data-lucide="badge-check"></i>
+
+            <span>Selected</span>
+          </div>
+
+          <div class="plan-icon">
+            <i data-lucide="star"></i>
+          </div>
+
+          <h3>Premium</h3>
+
+          <div class="plan-price">
+            <span class="currency"> KSh </span>
+
+            <h2>5,000</h2>
+
+            <span class="duration"> / month </span>
+          </div>
+
+          <hr />
+
+          <ul>
+            <li>
+              <i data-lucide="check"></i>
+
+              Everything in Basic
+            </li>
+
+            <li>
+              <i data-lucide="check"></i>
+
+              Group Classes
+            </li>
+
+            <li>
+              <i data-lucide="check"></i>
+
+              Personal Trainer
+            </li>
+
+            <li>
+              <i data-lucide="check"></i>
+
+              Nutrition Advice
+            </li>
+          </ul>
+
+          <hr />
+
+          <button class="plan-btn">Select Plan</button>
+        </div>
+
+        <div class="plan-card" data-plan="VIP" data-price="9000">
+          <div class="selected-badge">
+            <i data-lucide="badge-check"></i>
+
+            <span>Selected</span>
+          </div>
+
+          <div class="plan-icon">
+            <i data-lucide="crown"></i>
+          </div>
+
+          <h3>VIP</h3>
+
+          <div class="plan-price">
+            <span class="currency"> KSh </span>
+
+            <h2>9,000</h2>
+
+            <span class="duration"> / month </span>
+          </div>
+
+          <hr />
+
+          <ul>
+            <li>
+              <i data-lucide="check"></i>
+
+              Everything in Premium
+            </li>
+
+            <li>
+              <i data-lucide="check"></i>
+
+              Sauna Access
+            </li>
+
+            <li>
+              <i data-lucide="check"></i>
+
+              Massage Sessions
+            </li>
+
+            <li>
+              <i data-lucide="check"></i>
+
+              VIP Lounge
+            </li>
+          </ul>
+
+          <hr />
+
+          <button class="plan-btn">Select Plan</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="membership-benefits">
+      <div class="section-title">
+        <h2>Membership Benefits</h2>
+
+        <p>
+          Join FitZone Gym and enjoy world-class facilities, expert guidance,
+          and everything you need to stay healthy and achieve your fitness
+          goals.
+        </p>
+      </div>
+
+      <div class="benefits-container">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i data-lucide="dumbbell"></i>
+          </div>
+
+          <h3>Modern Equipment</h3>
+
+          <p>
+            Access high-quality cardio machines, free weights, and modern
+            strength equipment.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i data-lucide="users"></i>
+          </div>
+
+          <h3>Certified Trainers</h3>
+
+          <p>
+            Receive professional guidance and personalized workout support from
+            experienced trainers.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i data-lucide="apple"></i>
+          </div>
+
+          <h3>Nutrition Support</h3>
+
+          <p>
+            Get nutrition advice and healthy meal recommendations to maximize
+            your fitness results.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i data-lucide="users-round"></i>
+          </div>
+
+          <h3>Group Classes</h3>
+
+          <p>
+            Join exciting HIIT, Yoga, Zumba, Cardio and Strength training
+            sessions every week.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i data-lucide="shower-head"></i>
+          </div>
+
+          <h3>Clean Facilities</h3>
+
+          <p>
+            Enjoy clean locker rooms, showers, changing rooms, and hygienic
+            workout spaces.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i data-lucide="clock-3"></i>
+          </div>
+
+          <h3>Flexible Hours</h3>
+
+          <p>
+            Train early in the morning or late in the evening with convenient
+            operating hours.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="membership-comparison">
+      <div class="section-title">
+        <h2>Compare Membership Plans</h2>
+
+        <p>
+          Compare our membership packages and choose the one that best matches
+          your fitness journey.
+        </p>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Features</th>
+
+              <th>
+                <i data-lucide="badge"></i>
+                <br />
+                Basic
+              </th>
+
+              <th>
+                <i data-lucide="star"></i>
+                <br />
+                Premium
+              </th>
+
+              <th>
+                <i data-lucide="crown"></i>
+                <br />
+                VIP
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Gym Access</td>
+
+              <td><i data-lucide="check"></i></td>
+
+              <td><i data-lucide="check"></i></td>
+
+              <td><i data-lucide="check"></i></td>
+            </tr>
+
+            <tr>
+              <td>Locker Access</td>
+
+              <td><i data-lucide="check"></i></td>
+
+              <td><i data-lucide="check"></i></td>
+
+              <td><i data-lucide="check"></i></td>
+            </tr>
+
+            <tr>
+              <td>Fitness Assessment</td>
+
+              <td><i data-lucide="check"></i></td>
+
+              <td><i data-lucide="check"></i></td>
+
+              <td><i data-lucide="check"></i></td>
+            </tr>
+
+            <tr>
+              <td>Unlimited Group Classes</td>
+
+              <td><i data-lucide="x"></i></td>
+
+              <td><i data-lucide="check"></i></td>
+
+              <td><i data-lucide="check"></i></td>
+            </tr>
+
+            <tr>
+              <td>Personal Trainer</td>
+
+              <td><i data-lucide="x"></i></td>
+
+              <td><i data-lucide="check"></i></td>
+
+              <td><i data-lucide="check"></i></td>
+            </tr>
+
+            <tr>
+              <td>Nutrition Consultation</td>
+
+              <td><i data-lucide="x"></i></td>
+
+              <td><i data-lucide="check"></i></td>
+
+              <td><i data-lucide="check"></i></td>
+            </tr>
+
+            <tr>
+              <td>Sauna Access</td>
+
+              <td><i data-lucide="x"></i></td>
+
+              <td><i data-lucide="x"></i></td>
+
+              <td><i data-lucide="check"></i></td>
+            </tr>
+
+            <tr>
+              <td>Massage Sessions</td>
+
+              <td><i data-lucide="x"></i></td>
+
+              <td><i data-lucide="x"></i></td>
+
+              <td><i data-lucide="check"></i></td>
+            </tr>
+
+            <tr>
+              <td>VIP Lounge Access</td>
+
+              <td><i data-lucide="x"></i></td>
+
+              <td><i data-lucide="x"></i></td>
+
+              <td><i data-lucide="check"></i></td>
+            </tr>
+
+            <tr>
+              <td>Priority Support</td>
+
+              <td><i data-lucide="x"></i></td>
+
+              <td><i data-lucide="x"></i></td>
+
+              <td><i data-lucide="check"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="membership-calculator">
+      <div class="section-title">
+        <h2>Membership Cost Calculator</h2>
+
+        <p>
+          Your selected membership plan will automatically appear below. Simply
+          choose how long you'd like to train and we'll calculate your total
+          cost instantly.
+        </p>
+      </div>
+
+      <div class="calculator-container">
+        <div class="calculator-card">
+          <div class="calculator-icon">
+            <i data-lucide="calculator"></i>
+          </div>
+
+          <h3>Membership Calculator</h3>
+
+          <div class="selected-plan-display">
+            <label>Selected Membership Plan</label>
+
+            <div class="selected-plan">
+              <i data-lucide="badge-check"></i>
+
+              <span id="selectedPlanName"> No Plan Selected </span>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="calculatorDuration"> Membership Duration </label>
+
+            <select id="calculatorDuration">
+              <option value="">Select Duration</option>
+
+              <option value="1">1 Month</option>
+
+              <option value="3">3 Months</option>
+
+              <option value="6">6 Months</option>
+
+              <option value="12">12 Months (10% Discount)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="calculator-results">
+          <h3>Cost Summary</h3>
+
+          <div class="result-row">
+            <span>Selected Plan</span>
+
+            <strong id="summaryPlan"> - </strong>
+          </div>
+
+          <div class="result-row">
+            <span>Monthly Fee</span>
+
+            <strong id="monthlyFee"> KSh 0 </strong>
+          </div>
+
+          <div class="result-row">
+            <span>Duration</span>
+
+            <strong id="membershipDuration"> 0 Month </strong>
+          </div>
+
+          <div class="result-row">
+            <span>Discount</span>
+
+            <strong id="membershipDiscount"> 0% </strong>
+          </div>
+
+          <hr />
+
+          <div class="result-row total">
+            <span>Total Cost</span>
+
+            <strong id="membershipTotal"> KSh 0 </strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bmi-section">
+      <div class="section-title">
+        <h2>Body Mass Index (BMI) Calculator</h2>
+
+        <p>
+          Check your Body Mass Index to better understand your current fitness
+          level before beginning your journey.
+        </p>
+      </div>
+
+      <div class="bmi-container">
+        <div class="bmi-card">
+          <div class="calculator-icon">
+            <i data-lucide="activity"></i>
+          </div>
+
+          <h3>Calculate Your BMI</h3>
+
+          <div class="input-group">
+            <label for="height"> Height (cm) </label>
+
+            <input type="number" id="height" placeholder="Enter your height" />
+          </div>
+
+          <div class="input-group">
+            <label for="weight"> Weight (kg) </label>
+
+            <input type="number" id="weight" placeholder="Enter your weight" />
+          </div>
+
+          <button class="btn1" id="calculateBmi">Calculate BMI</button>
+        </div>
+
+        <div class="bmi-results">
+          <h3>Your BMI Result</h3>
+
+          <div class="result-row">
+            <span>BMI</span>
+
+            <strong id="bmiValue"> 0.0 </strong>
+          </div>
+
+          <div class="result-row">
+            <span>Status</span>
+
+            <strong id="bmiStatus"> Not Calculated </strong>
+          </div>
+
+          <hr />
+
+          <p id="bmiMessage">
+            Enter your height and weight to calculate your BMI.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="membership-form" id="membershipForm">
+      <div class="section-title">
+        <h2>Join FitZone Today</h2>
+
+        <p>
+          Complete the form below to apply for your membership. We'll review
+          your application and contact you shortly.
+        </p>
+      </div>
+
+      <div class="form-container">
+        <form id="membershipRegistrationForm">
+          <div class="input-group">
+            <label for="fullName">
+              <i data-lucide="user"></i>
+
+              Full Name
+            </label>
+
+            <input
+              type="text"
+              id="fullName"
+              placeholder="Enter your full name"
+            />
+
+            <small class="error" id="nameError"></small>
+          </div>
+
+          <div class="input-group">
+            <label for="email">
+              <i data-lucide="mail"></i>
+
+              Email Address
+            </label>
+
+            <input type="email" id="email" placeholder="Enter your email" />
+
+            <small class="error" id="emailError"></small>
+          </div>
+
+          <div class="input-group">
+            <label for="phone">
+              <i data-lucide="phone"></i>
+
+              Phone Number
+            </label>
+
+            <input type="tel" id="phone" placeholder="e.g. 0712345678" />
+
+            <small class="error" id="phoneError"></small>
+          </div>
+
+          <div class="input-group">
+            <label for="age">
+              <i data-lucide="calendar"></i>
+
+              Age
+            </label>
+
+            <input
+              type="number"
+              id="age"
+              min="16"
+              placeholder="Enter your age"
+            />
+
+            <small class="error" id="ageError"></small>
+          </div>
+
+          <div class="input-group">
+            <label for="gender">
+              <i data-lucide="users"></i>
+
+              Gender
+            </label>
+
+            <select id="gender">
+              <option value="">Select Gender</option>
+
+              <option>Male</option>
+
+              <option>Female</option>
+
+              <option>Prefer not to say</option>
+            </select>
+
+            <small class="error" id="genderError"></small>
+          </div>
+
+          <div class="input-group">
+            <label for="membershipPlan">
+              <i data-lucide="badge-check"></i>
+
+              Membership Plan
+            </label>
+
+            <input
+              type="text"
+              id="membershipPlan"
+              placeholder="Select a membership plan above"
+              readonly
+            />
+
+            <small class="error" id="planError"></small>
+          </div>
+
+          <div class="input-group">
+            <label for="membershipLength">
+              <i data-lucide="clock-3"></i>
+
+              Membership Duration
+            </label>
+
+            <input
+              type="text"
+              id="membershipLength"
+              placeholder="Choose a duration in the calculator"
+              readonly
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="startDate">
+              <i data-lucide="calendar-days"></i>
+
+              Preferred Start Date
+            </label>
+
+            <input type="date" id="startDate" />
+
+            <small class="error" id="startDateError"></small>
+          </div>
+
+          <div class="input-group">
+            <label for="fitnessGoal">
+              <i data-lucide="target"></i>
+
+              Fitness Goal
+            </label>
+
+            <textarea
+              id="fitnessGoal"
+              rows="5"
+              placeholder="Tell us your fitness goals..."
+            ></textarea>
+          </div>
+
+          <div class="input-group">
+            <label for="emergencyContact">
+              <i data-lucide="shield-plus"></i>
+
+              Emergency Contact Number
+            </label>
+
+            <input
+              type="tel"
+              id="emergencyContact"
+              placeholder="Enter emergency contact"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="medicalConditions">
+              <i data-lucide="heart-pulse"></i>
+
+              Medical Conditions (Optional)
+            </label>
+
+            <textarea
+              id="medicalConditions"
+              rows="4"
+              placeholder="Any injuries, allergies or medical conditions?"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn1 submit-btn">
+            <i data-lucide="send"></i>
+
+            Submit Membership Application
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="section-title">
+        <h2>What Our Members Say</h2>
+
+        <p>
+          Thousands of members trust FitZone Gym to help them achieve their
+          fitness goals.
+        </p>
+      </div>
+
+      <div class="testimonial-slider">
+        <div class="testimonial active">
+          <div class="testimonial-icon">
+            <i data-lucide="quote"></i>
+          </div>
+
+          <div class="stars">★★★★★</div>
+
+          <p>
+            "The trainers are incredibly supportive and the atmosphere keeps me
+            motivated every single day."
+          </p>
+
+          <h3>Sarah Wanjiku</h3>
+
+          <span> Premium Member </span>
+        </div>
+
+        <div class="testimonial">
+          <div class="testimonial-icon">
+            <i data-lucide="quote"></i>
+          </div>
+
+          <div class="stars">★★★★★</div>
+
+          <p>
+            "Joining FitZone was one of the best decisions I've made. I've lost
+            12kg and gained so much confidence."
+          </p>
+
+          <h3>Brian Otieno</h3>
+
+          <span> VIP Member </span>
+        </div>
+
+        <div class="testimonial">
+          <div class="testimonial-icon">
+            <i data-lucide="quote"></i>
+          </div>
+
+          <div class="stars">★★★★★</div>
+
+          <p>
+            "The equipment is modern, the staff are friendly and the group
+            classes are always fun."
+          </p>
+
+          <h3>Faith Achieng'</h3>
+
+          <span> Premium Member </span>
+        </div>
+      </div>
+
+      <div class="slider-dots">
+        <span class="dot active"></span>
+
+        <span class="dot"></span>
+
+        <span class="dot"></span>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+
+        <p>Have questions? Here are answers to some of the most common ones.</p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span> Can I cancel my membership anytime? </span>
+
+            <i data-lucide="plus"></i>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              Yes. Members can request cancellation according to our membership
+              terms and conditions.
             </p>
+          </div>
+        </div>
 
+        <div class="faq-item">
+          <button class="faq-question">
+            <span> Do you offer free fitness assessments? </span>
 
-            <!-- Membership Plans -->
-            <div class="plans">
+            <i data-lucide="plus"></i>
+          </button>
 
-<!-- Basic Plan -->
-<div class="plan">
+          <div class="faq-answer">
+            <p>
+              Yes. Every new member receives an initial fitness assessment from
+              one of our certified trainers.
+            </p>
+          </div>
+        </div>
 
-    <h3>Basic</h3>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span> Are personal trainers included? </span>
 
-    <h4>
-        KSh 1,500
-        <span>/ month</span>
-    </h4>
+            <i data-lucide="plus"></i>
+          </button>
 
-    <ul>
-        <li>Gym Access</li>
-        <li>Locker Access</li>
-        <li>Basic Equipment</li>
-    </ul>
+          <div class="faq-answer">
+            <p>
+              Personal trainers are included with Premium and VIP memberships.
+            </p>
+          </div>
+        </div>
 
-    <a href="contact.html"
-       class="plan-btn"
-       data-plan="Basic">
-        Choose Plan
-    </a>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span> What are your operating hours? </span>
 
-</div>
+            <i data-lucide="plus"></i>
+          </button>
 
+          <div class="faq-answer">
+            <p>We are open Monday to Sunday from 5:00 AM to 11:00 PM.</p>
+          </div>
+        </div>
 
-<!-- Standard Plan -->
-<div class="plan featured">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span> Do you have parking? </span>
 
-    <h3>Standard</h3>
+            <i data-lucide="plus"></i>
+          </button>
 
-    <h4>
-        KSh 2,500
-        <span>/ month</span>
-    </h4>
+          <div class="faq-answer">
+            <p>Yes. Free parking is available for all registered members.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <ul>
-        <li>Full Gym Access</li>
-        <li>All Training Classes</li>
-        <li>Trainer Guidance</li>
-        <li>Locker Access</li>
-    </ul>
+    <section class="membership-cta">
+      <div class="cta-content">
+        <div class="cta-icon">
+          <i data-lucide="dumbbell"></i>
+        </div>
 
-    <a href="contact.html"
-       class="plan-btn"
-       data-plan="Standard">
-        Choose Plan
-    </a>
+        <h2>Ready To Transform Your Life?</h2>
 
-</div>
+        <p>
+          Join over <strong>3,000+</strong> members who trust FitZone Gym for
+          their fitness journey.
+        </p>
 
+        <div class="buttons">
+          <a href="#membershipForm" class="btn1"> Join Now </a>
 
-<!-- Premium Plan -->
-<div class="plan">
+          <a href="#plans" class="btn2"> View Plans </a>
+        </div>
+      </div>
+    </section>
 
-    <h3>Premium</h3>
+    <div class="payment-modal" id="paymentModal">
+      <div class="payment-content">
+        <h2>Complete Membership Registration</h2>
 
-    <h4>
-        KSh 4,000
-        <span>/ month</span>
-    </h4>
+        <p>Choose how you would like to pay for your membership.</p>
 
-    <ul>
-        <li>Unlimited Gym Access</li>
-        <li>Personal Trainer</li>
-        <li>Nutrition Guidance</li>
-        <li>All Training Classes</li>
-    </ul>
+        <div class="payment-summary">
+          <p>
+            <strong>Plan:</strong>
+            <span id="paymentPlan"></span>
+          </p>
 
-    <a href="contact.html"
-       class="plan-btn"
-       data-plan="Premium">
-        Choose Plan
-    </a>
+          <p>
+            <strong>Duration:</strong>
+            <span id="paymentDuration"></span>
+          </p>
 
-</div>
+          <p>
+            <strong>Total:</strong>
+            <span id="paymentTotal"></span>
+          </p>
+        </div>
 
+        <div class="input-group">
+          <label>Payment Method</label>
 
+          <select id="paymentMethod">
+            <option value="">Select Payment Method</option>
+
+            <option value="Card">Debit / Credit Card</option>
+
+            <option value="Mpesa">M-Pesa</option>
+
+            <option value="Physical">Pay at the Gym</option>
+          </select>
+        </div>
+
+        <div id="cardFields" class="payment-fields">
+          <div class="input-group">
+            <label>Card Holder</label>
+            <input type="text" id="cardName" />
+          </div>
+
+          <div class="input-group">
+            <label>Card Number</label>
+            <input type="text" id="cardNumber" />
+          </div>
+
+          <div class="card-row">
+            <div class="input-group">
+              <label>Expiry</label>
+              <input type="text" id="expiry" placeholder="MM/YY" />
             </div>
 
-        </section>
+            <div class="input-group">
+              <label>CVV</label>
+              <input type="password" id="cvv" placeholder="123" />
+            </div>
+          </div>
+        </div>
 
-    </main>
+        <div id="mpesaFields" class="payment-fields">
+          <div class="input-group">
+            <label>M-Pesa Number</label>
 
-      <script src="script.js"></script>
+            <input type="tel" id="mpesaNumber" placeholder="07XXXXXXXX" />
+          </div>
+        </div>
 
-</body>
+        <div id="physicalFields" class="payment-fields">
+          <p>
+            You have chosen to pay at the gym. Your application will still be
+            submitted. Payment status will be recorded as
 
-</html>-
+            <strong>Pending Physical Payment</strong>
+          </p>
+        </div>
+
+        <div class="payment-buttons">
+          <button class="btn2" id="cancelPayment">Cancel</button>
+
+          <button class="btn1" id="confirmPayment">Continue</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="success-modal" id="successModal">
+      <div class="success-content">
+        <div class="success-icon">
+          <i data-lucide="circle-check-big"></i>
+        </div>
+
+        <h2>Membership Application Submitted!</h2>
+
+        <p>
+          Thank you,
+          <strong id="memberName"> Member </strong>
+        </p>
+
+        <p>
+          Your application for the
+
+          <strong id="selectedMembership"> Premium Membership </strong>
+
+          has been received successfully.
+        </p>
+
+        <p>
+          A confirmation email has been sent to your inbox. Our team will
+          contact you shortly.
+        </p>
+
+        <button class="btn1" id="closeSuccessModal">Close</button>
+      </div>
+    </div>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="membership.js"></script>
+  </body>
+</html>
