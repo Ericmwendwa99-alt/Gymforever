@@ -1312,3 +1312,84 @@ select {
 .dot:hover {
   background: #fff;
 }
+.faq {
+  padding: 110px 8%;
+  background: #111;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 60px auto 0;
+}
+
+.faq-item {
+  margin-bottom: 18px;
+  background: #1b1b1b;
+  border: 1px solid rgba(255, 193, 7, 0.15);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.faq-item:hover {
+  border-color: #ffc107;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 22px 28px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.faq-question:hover {
+  color: #ffc107;
+}
+
+.faq-question i {
+  width: 24px;
+  height: 24px;
+  color: #ffc107;
+  transition: 0.35s;
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease;
+}
+
+.faq-answer p {
+  padding: 0 28px 25px;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 220px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
