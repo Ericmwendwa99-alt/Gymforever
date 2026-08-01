@@ -3,15 +3,14 @@
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![EmailJS](https://img.shields.io/badge/EmailJS-FF6B35?style=for-the-badge)
-![Lucide](https://img.shields.io/badge/Lucide_Icons-000000?style=for-the-badge)
 
-> A gym website built using HTML, CSS and JavaScript. This project showcases different sections of a modern fitness website including Home, about, classes, memberships, contact information.
+> A responsive gym website built using HTML, CSS, and JavaScript. The website includes pages for Home, About, Classes, Membership, and Contact, providing users with an interactive fitness experience.
 
 ---
 
 ## **Features**
 
+- Responsive multi-page gym website
 - Membership page (plan price calculation, BMI calculator, member sign up)
 
 
@@ -35,14 +34,14 @@ git clone https://github.com/Ericmwendwa99-alt/Gymforever
 2. Open the project folder
 
 ```bash
-cd FitZone
+cd Gymforever
 ```
 
 3. Open `index.html` with Live Server or your preferred local server.
 
 ---
 
-# **Membership Page**
+## **Membership Page**
 
 The Membership page allows users to explore available membership plans, calculate their subscription cost, estimate their Body Mass Index (BMI), and register for a gym membership through an interactive form.
 
