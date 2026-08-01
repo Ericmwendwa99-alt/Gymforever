@@ -85,5 +85,5 @@ The website is fully responsive and optimized for:
 ## **Authors**
 
 - [Richard Wasonga](https://github.com/Richard3wasonga) *(Membership Page)*
-- [Ashley Mwanza](https://github.com/Richard3wasonga) *(Membership Page)*
+- [Ashley Mwanza](https://github.com/httpsxash) *(Membership Page)*
 
