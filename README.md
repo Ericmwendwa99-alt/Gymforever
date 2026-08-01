@@ -6,21 +6,14 @@
 ![EmailJS](https://img.shields.io/badge/EmailJS-FF6B35?style=for-the-badge)
 ![Lucide](https://img.shields.io/badge/Lucide_Icons-000000?style=for-the-badge)
 
-> A responsive gym website built using HTML, CSS and JavaScript. This project showcases different sections of a modern fitness website including memberships, classes, trainers and contact information.
+> A gym website built using HTML, CSS and JavaScript. This project showcases different sections of a modern fitness website including Home, about, classes, memberships, contact information.
 
 ---
 
 ## **Features**
 
-- Responsive design for desktop, tablet and mobile
-- Interactive navigation with mobile hamburger menu
-- Modern fitness-themed user interface
-- Membership registration system
-- Membership cost calculator
-- BMI Calculator
-- Email confirmation using EmailJS
-- Frequently Asked Questions (FAQ)
-- Customer testimonials slider
+- Membership page (plan price calculation, BMI calculator, member sign up)
+
 
 ---
 
@@ -36,7 +29,7 @@
 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Ericmwendwa99-alt/Gymforever
 ```
 
 2. Open the project folder
@@ -68,13 +61,13 @@ The Membership page allows users to explore available membership plans, calculat
 
 ## **Technologies Used**
 
-| Category | Technology |
-|----------|------------|
-| Structure | HTML5 |
-| Styling | CSS3 |
+| Category      | Technology       |
+|---------------|------------------|
+| Structure     | HTML5            |
+| Styling       | CSS3             |
 | Functionality | JavaScript (ES6) |
-| Icons | Lucide Icons |
-| Email Service | EmailJS |
+| Icons         | Lucide Icons     |
+| Email Service | EmailJS          |
 
 ---
 
