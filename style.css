@@ -516,3 +516,574 @@ nav ul li a.active{
 
     text-align:center;
 }
+/* membership */
+
+.membership-hero {
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(17, 17, 17, 0.88), rgba(17, 17, 17, 0.88)),
+    url("images/gym1.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.membership-plans,
+.membership-benefits,
+.membership-comparison,
+.membership-calculator,
+.bmi-section,
+.membership-form,
+.testimonials,
+.faq,
+.membership-cta {
+  padding: 100px 0;
+  background: #111;
+}
+
+.membership-plans:nth-child(even),
+.membership-benefits:nth-child(even),
+.membership-comparison:nth-child(even),
+.membership-calculator:nth-child(even),
+.bmi-section:nth-child(even),
+.membership-form:nth-child(even),
+.testimonials:nth-child(even),
+.faq:nth-child(even) {
+  background: #151515;
+}
+
+.section-title {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 48px;
+  color: #ffc107;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.section-title p {
+  max-width: 720px;
+  margin: auto;
+  color: #ddd;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.plans-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.plan-card {
+  position: relative;
+  background: #1b1b1b;
+  border: 2px solid transparent;
+  border-radius: 18px;
+  padding: 40px 35px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.35s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.plan-card:hover {
+  transform: translateY(-12px);
+  border-color: #ffc107;
+  box-shadow: 0 18px 40px rgba(255, 193, 7, 0.18);
+}
+
+.plan-card.featured {
+  border: 2px solid #ffc107;
+  transform: scale(1.03);
+  box-shadow: 0 20px 45px rgba(255, 193, 7, 0.25);
+}
+
+.plan-card.featured:hover {
+  transform: translateY(-12px) scale(1.05);
+}
+
+.popular {
+  position: absolute;
+  top: 18px;
+  right: -38px;
+  width: 170px;
+  padding: 8px 0;
+  background: #ffc107;
+  color: #111;
+  font-weight: bold;
+  font-size: 14px;
+  transform: rotate(45deg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.selected-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #2b2b2b;
+  color: #ffc107;
+  border: 1px solid rgba(255, 193, 7, 0.4);
+  padding: 6px 12px;
+  border-radius: 50px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: 0.3s;
+}
+
+.selected-badge svg {
+  width: 18px;
+  height: 18px;
+}
+
+.plan-card.selected {
+  border-color: #ffc107;
+  transform: translateY(-10px);
+  box-shadow: 0 22px 45px rgba(255, 193, 7, 0.3);
+}
+
+.plan-card.selected .selected-badge {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.plan-icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #ffc107;
+  color: #111;
+}
+
+.plan-icon svg {
+  width: 44px;
+  height: 44px;
+  stroke-width: 2;
+}
+
+.plan-card h3 {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.plan-price {
+  margin-bottom: 25px;
+}
+
+.plan-price .currency {
+  display: block;
+  color: #ddd;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.plan-price h2 {
+  font-size: 64px;
+  color: #ffc107;
+  line-height: 1;
+}
+
+.plan-price .duration {
+  display: block;
+  color: #bbb;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.plan-card hr {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 30px 0;
+}
+
+.plan-card ul {
+  list-style: none;
+  text-align: left;
+}
+
+.plan-card ul li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0;
+  color: #ddd;
+  font-size: 17px;
+}
+
+.plan-card ul li svg {
+  width: 20px;
+  height: 20px;
+  color: #ffc107;
+  flex-shrink: 0;
+}
+
+.plan-btn {
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #ffc107;
+  color: #111;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.plan-btn:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+.plan-card.selected .plan-btn {
+  background: #2ecc71;
+  color: #fff;
+}
+
+.benefits-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.benefit-card {
+  background: #1b1b1b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: 0.35s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+  border-color: #ffc107;
+  box-shadow: 0 18px 35px rgba(255, 193, 7, 0.18);
+}
+
+.benefit-icon {
+  width: 85px;
+  height: 85px;
+  margin: 0 auto 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffc107;
+  color: #111;
+  border-radius: 50%;
+}
+
+.benefit-icon svg {
+  width: 40px;
+  height: 40px;
+  stroke-width: 2;
+}
+
+.benefit-card h3 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+.benefit-card p {
+  color: #cfcfcf;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.table-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  overflow-x: auto;
+  border-radius: 18px;
+  background: #1b1b1b;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 850px;
+}
+
+thead {
+  background: #ffc107;
+}
+
+thead th {
+  color: #111;
+  font-size: 20px;
+  padding: 25px 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+thead th:first-child {
+  text-align: left;
+}
+
+thead svg {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 10px;
+}
+
+tbody tr {
+  transition: 0.3s;
+}
+
+tbody tr:nth-child(even) {
+  background: #202020;
+}
+
+tbody tr:hover {
+  background: #292929;
+}
+
+tbody td {
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+  color: #ddd;
+  font-size: 17px;
+}
+
+tbody td:first-child {
+  text-align: left;
+  font-weight: 600;
+  color: #fff;
+}
+
+tbody td svg {
+  width: 22px;
+  height: 22px;
+}
+
+tbody td .lucide-check {
+  color: #2ecc71;
+}
+
+tbody td .lucide-x {
+  color: #ff4d4d;
+}
+
+.calculator-container,
+.bmi-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+}
+
+.calculator-card,
+.calculator-results,
+.bmi-card,
+.bmi-results {
+  background: #1b1b1b;
+  border-radius: 18px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: 0.3s;
+}
+
+.calculator-card:hover,
+.calculator-results:hover,
+.bmi-card:hover,
+.bmi-results:hover {
+  transform: translateY(-6px);
+  border-color: #ffc107;
+  box-shadow: 0 15px 35px rgba(255, 193, 7, 0.15);
+}
+
+.calculator-icon {
+  width: 85px;
+  height: 85px;
+  background: #ffc107;
+  color: #111;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 25px;
+}
+
+.calculator-icon svg {
+  width: 42px;
+  height: 42px;
+}
+
+.calculator-card h3,
+.calculator-results h3,
+.bmi-card h3,
+.bmi-results h3 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 35px;
+  color: #fff;
+}
+
+.input-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #ffc107;
+}
+
+.input-group label svg {
+  width: 18px;
+  height: 18px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  width: 100%;
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 12px rgba(255, 193, 7, 0.15);
+}
+
+.selected-plan-display {
+  margin-bottom: 30px;
+}
+
+.selected-plan {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  background: #111;
+  border: 1px solid #333;
+  color: #ffc107;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.selected-plan svg {
+  width: 22px;
+  height: 22px;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.result-row span {
+  color: #bbb;
+}
+
+.result-row strong {
+  color: #fff;
+}
+
+.result-row.total {
+  margin-top: 20px;
+  padding-top: 25px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.result-row.total strong {
+  color: #ffc107;
+  font-size: 34px;
+}
+
+.calculator-results hr,
+.bmi-results hr {
+  border: none;
+  height: 1px;
+  background: #333;
+  margin: 25px 0;
+}
+
+#bmiMessage {
+  margin-top: 25px;
+  color: #ddd;
+  line-height: 1.8;
+  text-align: center;
+}
+
+#bmiValue {
+  color: #ffc107;
+  font-size: 34px;
+}
+
+#bmiStatus {
+  font-weight: bold;
+}
+
+#bmiStatus.bmi-underweight {
+  color: #3498db;
+}
+
+#bmiStatus.bmi-normal {
+  color: #2ecc71;
+}
+
+#bmiStatus.bmi-overweight {
+  color: #f1c40f;
+}
+
+#bmiStatus.bmi-obese {
+  color: #e74c3c;
+}
+
+.calculator-card .btn1,
+.bmi-card .btn1 {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+}
