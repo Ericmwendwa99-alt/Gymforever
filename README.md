@@ -11,7 +11,7 @@
 ## **Features**
 
 - Responsive multi-page gym website
-- Membership page (plan price calculation, BMI calculator, member sign up)
+- Membership page (plan calculator, BMI calculator, member registration)
 
 
 ---
@@ -39,11 +39,13 @@ cd Gymforever
 
 3. Open `index.html` with Live Server or your preferred local server.
 
+The website will open in your default browser.
+
 ---
 
 ## **Membership Page**
 
-The Membership page allows users to explore available membership plans, calculate their subscription cost, estimate their Body Mass Index (BMI), and register for a gym membership through an interactive form.
+The Membership page allows users to explore available membership plans, calculate their subscription cost, calculate their Body Mass Index (BMI), and register for a gym membership through an interactive form.
 
 ### **Key Features**
 
