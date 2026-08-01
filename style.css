@@ -1541,3 +1541,158 @@ select {
 .success-modal.show .success-content {
   transform: scale(1);
 }
+.payment-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.35s;
+  z-index: 9999;
+}
+
+.payment-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.payment-content {
+  width: min(92%, 650px);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #1b1b1b;
+  border: 2px solid rgba(255, 193, 7, 0.25);
+  border-radius: 22px;
+  padding: 45px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+  transform: scale(0.9);
+  transition: 0.35s;
+}
+
+.payment-modal.show .payment-content {
+  transform: scale(1);
+}
+
+.payment-content h2 {
+  text-align: center;
+  color: #ffc107;
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.payment-content > p {
+  text-align: center;
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.payment-summary {
+  background: #111;
+  border: 1px solid rgba(255, 193, 7, 0.15);
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.payment-summary p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ddd;
+  margin: 14px 0;
+  font-size: 17px;
+}
+
+.payment-summary strong {
+  color: #ffc107;
+}
+
+.payment-summary span {
+  color: #fff;
+  font-weight: bold;
+}
+
+.payment-fields {
+  display: none;
+  margin-top: 25px;
+  animation: fadeIn 0.3s ease;
+}
+
+.payment-fields.show {
+  display: block;
+}
+
+#physicalFields p {
+  background: #111;
+  border-left: 5px solid #ffc107;
+  border-radius: 12px;
+  padding: 20px;
+  color: #ddd;
+  line-height: 1.8;
+}
+
+#physicalFields strong {
+  color: #ffc107;
+}
+
+.payment-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.payment-buttons button {
+  border: none;
+  cursor: pointer;
+  padding: 15px 35px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.payment-buttons .btn1:hover,
+.payment-buttons .btn2:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(255, 193, 7, 0.2);
+}
+
+.payment-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.payment-content::-webkit-scrollbar-thumb {
+  background: #ffc107;
+  border-radius: 20px;
+}
+
+.payment-content::-webkit-scrollbar-track {
+  background: #222;
+}
+.card-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 8px;
+}
+
+.menu-toggle svg {
+  width: 34px;
+  height: 34px;
+}
+
+#navbar {
+  display: block;
+}
